@@ -26,7 +26,7 @@ def cpf():
     recv = requests.get('http://api-onlyfalopas.herokuapp.com/cpf/?cpf={}'.format(cpf)).json()
     clear();linha();print('\033[1;92m#RESULTADO#')
     #valor 'pessoa' pega valor recv['pessoa']['valor']
-    print('CPF:', recv['id'],'\nNome:', recv['pessoa']['nome'], '\nNome da Mãe:', recv['nomeMae'], '\nSexo:', recv['sexo'], '\nCidade:', recv['pessoa']['nomeMunicipio'], '\nBairro', recv['pessoa']['descricaoComplemento'], '\nRua:', recv['pessoa']['nomeLogradouro'], '\nCep:', recv['pessoa']['numeroCep'])
+    print('CPF:', recv['id'],'\nNome:', recv['pessoa']['nome'], '\nNome da Mãe:', recv['nomeMae'],'\nData de Nascimento:', recv['dataNascimento'] '\nSexo:', recv['sexo'], '\nCidade:', recv['pessoa']['nomeMunicipio'], '\nBairro', recv['pessoa']['descricaoComplemento'], '\nRua:', recv['pessoa']['nomeLogradouro'], '\nCep:', recv['pessoa']['numeroCep'])
     linha();continuar()
 
 def ip():
